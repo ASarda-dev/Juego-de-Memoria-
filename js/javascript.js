@@ -48,6 +48,15 @@ function descubrir() {
 
   comparar(descubiertas);
 }
+function comparar(tarjetasAComparar) {
+  if (
+    tarjetasAComparar[0].dataset.valor === tarjetasAComparar[1].dataset.valor
+  ) {
+    acierto(tarjetasAComparar);
+  } else {
+    error(tarjetasAComparar);
+  }
+}
 
 reparteTarjetas();
 
