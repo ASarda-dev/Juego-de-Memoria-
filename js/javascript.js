@@ -30,6 +30,11 @@ function reparteTarjetas() {
 }
 
 function descubrir() {
+  var totalDescubiertas = document.querySelectorAll('.descubierta')
+  
+  if(totalDescubiertas.length >1){
+return;
+  }
   this.classList.add("descubierta");
 }
 
