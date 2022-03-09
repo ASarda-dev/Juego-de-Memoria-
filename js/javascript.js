@@ -30,12 +30,23 @@ function reparteTarjetas() {
 }
 
 function descubrir() {
-  var totalDescubiertas = document.querySelectorAll('.descubierta')
-  
-  if(totalDescubiertas.length >1){
-return;
+  var descubiertas;
+  var totalDescubiertas = document.querySelectorAll(
+    ".descubierta:not(.acertada)"
+  );
+
+  if (totalDescubiertas.length > 1) {
+    return;
   }
+
   this.classList.add("descubierta");
+
+  descubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
+  if (descubiertas.length < 2) {
+    return;
+  }
+
+  comparar(descubiertas);
 }
 
 reparteTarjetas();
