@@ -1,15 +1,15 @@
-function barajaTarjetas() {
+function barajaTarjetas(lasTarjetas) {
   var resultado;
+  var totalTarjetas = lasTarjetas.concat(lasTarjetas);
   resultado = totalTarjetas.sort(function() {
     return 0.5 - Math.random();
   });
   return resultado;
 }
-console.log(barajaTarjetas())
 
-function reparteTarjetas() {
+function reparteTarjetas(lasTarjetas) {
   var mesa = document.querySelector("#mesa");
-  var tarjetasBarajadas = barajaTarjetas();
+  var tarjetasBarajadas = barajaTarjetas(lasTarjetas);
   mesa.innerHTML = "";
 
   tarjetasBarajadas.forEach(function(elemento) {

@@ -2,14 +2,22 @@
   --bg: #fafafa;
   --font: "Archivo", sans-serif;
   --font-display: "Archivo Narrow", sans-serif;
-  --hotpink: #e94057;
-  --orange: #f27121;
+  --hotpink: #4feea4 ;
+  --orange: #f6f868;
+  --fondo: rgb(26, 53, 26);
+  --fondodos: rgb(20, 185, 50);
   --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
+  /* --gradient: linear-gradient(35deg, var(--fondo), var(--orange),var(--fondodos)); */
+}
+
+*{
+  box-sizing: border-box;
 }
 
 body {
   margin: auto;
   min-height: 100vh;
-  background: var(--bg);
+  /* background: var(--bg); */
+  background: var(--gradient);
   font-family: var(--font);
 }
